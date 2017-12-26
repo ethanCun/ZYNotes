@@ -47,6 +47,23 @@
 {
     NSLog(@"v1 hitText");
     
+    /**
+     点击子视图超出父视图范围的区域任然 响应子视图
+     */
+    if ([self.layer containsPoint:point] == NO) {
+        
+        
+        for (UIView *subView in self.subviews) {
+            
+            
+            if ([subView.layer containsPoint:point] == YES) {
+                
+                return subView;
+            }
+        }
+        
+        return nil;
+    }
     
     /**
      注 意：如果hitTest:withEvent:方法中返回nil，那么调用该方法的控件本身和其子控件都不是最合适的view，也就是在自己身上没有找到更合适的view。那么最合适的view就是该控件的父控件。

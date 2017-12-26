@@ -60,7 +60,7 @@
     _v1.userInteractionEnabled = YES;
     [self.view addSubview:_v1];
     
-    _v2 = [[vvv2 alloc] initWithFrame:CGRectMake(10, 10, 50, 50)];
+    _v2 = [[vvv2 alloc] initWithFrame:CGRectMake(10, 10, 250, 350)];
     _v2.backgroundColor = [UIColor greenColor];
     
     //拦截事件 交给父视图
