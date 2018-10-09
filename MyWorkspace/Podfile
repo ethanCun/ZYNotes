@@ -1,0 +1,21 @@
+platform :ios ,'8.0'
+
+#user_frameworks!
+
+# workSpace文件名
+workspace 'MyWorkspace.xcworkspace'
+
+# 主工程路径
+project 'MainProject/MainProject.xcodeproj'
+
+target 'MainProject' do
+# 工程路径
+project 'MainProject/MainProject.xcodeproj'
+pod 'AFNetworking'
+end
+
+target 'Project2' do
+project 'Project2/Project2.xcodeproj'
+pod 'YYModel'
+end
+
